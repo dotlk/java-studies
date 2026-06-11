@@ -18,8 +18,8 @@ public class TreinoScanner {
         //retornar mensagem com os dados do usuário
         System.out.println("Olá, " + nome + "! Você tem " + idade + " anos.");
 
-        //finalizar o objeto Scanner
-        obj.close();
+        //finalizar o objeto Scanner, para evitar vazamento de memória
+        obj.close(); 
     }
 
 

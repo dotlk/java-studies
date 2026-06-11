@@ -1,6 +1,8 @@
-public class Condicional {
+public class EstruturaCondicional {
     
     public static void main(String[] args) {
+        //A estrutura condicional é interessante para se usar com operadores relacionais e lógicos, mas não é regra.
+
         //Variáveis
         int nota = 85;
 
