@@ -3,8 +3,9 @@ import java.util.ArrayList;
 public class ClasseArrayList {
     public static void main(String[] args) {
 
-        //Arraylist é a famosa lista, ela é uma coleção de objetos, onde podemos adicionar, remover e acessar os elementos de forma dinâmica.
+        //Arraylist é a famosa list, ela é uma coleção de objetos, onde podemos adicionar, remover e acessar os elementos de forma dinâmica.
         //Arraylist trabalha somente com objetos (String, Integer, Double, etc), não trabalha com tipos primitivos (int, double, char, etc)
+        //OBS: Tipos primitivos podem ser convertido em objetos ao usar classes Wrapper
         
         //Criando um ArrayList de String
         ArrayList<String> lista = new ArrayList<>();

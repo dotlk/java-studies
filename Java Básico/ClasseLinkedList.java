@@ -7,7 +7,8 @@ public class ClasseLinkedList {
         //linkedlist é uma estrutura de dados que armazena os elementos em nós, onde cada nó contém um valor e uma referência para o próximo nó. 
         //Também é uma coleção de objetos, onde podemos adicionar, remover e acessar os elementos de forma dinâmica.
         //Linkedlist trabalha somente com objetos (String, Integer, Double, etc), não trabalha com tipos primitivos (int, double, char, etc)
-
+        //OBS: Tipos primitivos podem ser convertido em objetos ao usar classes Wrapper
+        
         //Diferenças entre ArrayList e LinkedList:
         //Arraylist é uma estrutura de dados que armazena os elementos em um array, onde cada elemento é acessado por meio de um índice.
         //Linkedlist é uma estrutura de dados que armazena os elementos em nós, pode acessar o primeiro elemento, o último elemento e o próximo elemento 
@@ -43,5 +44,6 @@ public class ClasseLinkedList {
 
         //Tamanho da lista
         System.out.println("Tamanho da lista: " + lista.size()); //Tamanho da lista: 0
+
     }
 }
