@@ -2,7 +2,7 @@ public class ModificadoresDeAcesso {
     
     public static void main(String[] args) {
 
-        //Os modificadores de acesso em Java são palavras-chave que definem quem pode acessar uma classe, atributo, método ou construtor.
+        //Os modificadores de acesso em Java são palavras-chave que definem quem pode acessar uma classe, atributo, método ou construtor. (membros)
         //Eles são usados para controlar a visibilidade e proteger os dados do programa.
 
         //Default: Quando não é especificado o modificador

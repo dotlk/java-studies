@@ -1,3 +1,5 @@
+//Todo arquivo precisa ter pelomenos uma classe public com o seu nome. 
+//Na presença do método main, essa será classe principal do arquivo e iniciará a execução do programa.
 //Estrutura usada durante todo o estudo. 
 
 public class Classes {

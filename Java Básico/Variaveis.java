@@ -1,5 +1,8 @@
 public class Variaveis {
-    
+    //Variáveis são espaços na memória que armazenam dados.
+    //Variáveis fora de métodos (na classe): atributos, pertencem ao objeto e podem usar modificadores de acesso (private, public, default, protected).
+    //Variáveis dentro de métodos: variáveis locais, temporárias, só existem durante a execução do método e não usam modificadores de acesso.
+
     public static void main(String[] args) {
 
         //Tipos de dados numéricos inteiros
@@ -32,5 +35,7 @@ public class Variaveis {
         System.out.println("Nome: " + nome);
         System.out.println("Letra: " + letra);
         System.out.println("É estudante: " + isEstudante);
+
+
     }
 }
