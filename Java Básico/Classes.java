@@ -1,3 +1,5 @@
+//Estrutura usada durante todo o estudo. 
+
 public class Classes {
     public static void main(String[] args) {
         System.out.println("Olá, mundo!");
@@ -10,3 +12,5 @@ public class Classes {
     }
     
 }
+
+//Aprofundamento do assunto no estudo de orientação a objetos.
