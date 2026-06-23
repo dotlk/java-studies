@@ -17,11 +17,13 @@ public class RankingJogadores {
                     
                     1 - Adicionar jogador
                     2 - Ver Ranking
-                    3 - Sair
+                    3 - Editar jogador
+                    4 - Remover jogador
+                    5 - Sair
                     """);
 
             // Usuário fechou a janela ou escolheu sair
-            if (opcao == null || opcao.equals("3")) {
+            if (opcao == null || opcao.equals("5")) {
                 break;
             }
 
@@ -89,6 +91,8 @@ public class RankingJogadores {
                     // Percorre as pontuações ordenadas
                     for (Integer score : listaPontuacoes) {
 
+                        String jogadorEncontrado = null;
+
                         // Procura qual jogador possui essa pontuação
                         for (String jogador : leaderboardTemp.keySet()) {
 
@@ -100,16 +104,111 @@ public class RankingJogadores {
                                         + score + "\n";
 
                                 posicao++;
-
-                                // Remove o jogador da cópia para evitar repetição
-                                leaderboardTemp.remove(jogador);
-
+                                jogadorEncontrado = jogador;
                                 break;
                             }
+                        }
+
+                        // Remove o jogador da cópia para evitar repetição
+                        if (jogadorEncontrado != null) {
+                            leaderboardTemp.remove(jogadorEncontrado);
                         }
                     }
 
                     JOptionPane.showMessageDialog(null, ranking);
+
+                    break;
+
+                case "3":
+
+                    // Verifica se existem jogadores cadastrados
+                    if (leaderboard.isEmpty()) {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Nenhum jogador cadastrado."
+                        );
+                        break;
+                    }
+
+                    // Solicita o nome do jogador a ser editado
+                    String jogadorAntigo = JOptionPane.showInputDialog(
+                            "Digite o nome do jogador que deseja editar:"
+                    );
+
+                    // Verifica se o jogador existe
+                    if (!leaderboard.containsKey(jogadorAntigo)) {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Jogador não encontrado."
+                        );
+                        break;
+                    }
+
+                    // Solicita o novo nome
+                    String novoNome = JOptionPane.showInputDialog(
+                            "Digite o novo nome do jogador:"
+                    );
+
+                    if (novoNome == null || novoNome.isBlank()) {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Nome inválido."
+                        );
+                        break;
+                    }
+
+                    // Solicita a nova pontuação
+                    int novaPontuacao = Integer.parseInt(
+                            JOptionPane.showInputDialog(
+                                    "Digite a nova pontuação:"
+                            )
+                    );
+
+                    // Remove o registro antigo
+                    leaderboard.remove(jogadorAntigo);
+
+                    // Adiciona o novo registro
+                    leaderboard.put(novoNome, novaPontuacao);
+
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Jogador atualizado com sucesso!"
+                    );
+
+                    break;
+
+                case "4":
+
+                    // Verifica se existem jogadores cadastrados
+                    if (leaderboard.isEmpty()) {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Nenhum jogador cadastrado."
+                        );
+                        break;
+                    }
+
+                    // Solicita o nome do jogador a ser removido
+                    String jogadorRemover = JOptionPane.showInputDialog(
+                            "Digite o nome do jogador que deseja remover:"
+                    );
+
+                    // Verifica se o jogador existe
+                    if (!leaderboard.containsKey(jogadorRemover)) {
+                        JOptionPane.showMessageDialog(
+                                null,
+                                "Jogador não encontrado."
+                        );
+                        break;
+                    }
+
+                    // Remove o jogador
+                    leaderboard.remove(jogadorRemover);
+
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Jogador removido com sucesso!"
+                    );
 
                     break;
 
