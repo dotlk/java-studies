@@ -19,7 +19,7 @@ class Humano {
 
     //Métodos Set e Get
     public void setNome(String nome) {
-        this.nome = nome; //this é usado para se referenciar ao atributo do objeto - Útil para diferenciar parâmetros de atributos.
+        this.nome = nome; //this é usado para se referenciar ao atributo do objeto - Útil para diferenciar atributos de parâmetros.
     }
 
     public void getNome() {

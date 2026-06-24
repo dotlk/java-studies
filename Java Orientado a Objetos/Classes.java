@@ -1,8 +1,11 @@
 //As classes funcionam como moldes para gerar objetos
 //OBS - Boa Prática: Toda classe começa com letra maiúscula
 
-//Todo arquivo precisa ter pelomenos uma classe public com o seu nome. 
-//Na presença do método main, essa será classe principal do arquivo e iniciará a execução do programa.
+//Todo arquivo pode possuir várias classes, porém, apenas uma delas pode ser public,
+//A classe public deve ter o mesmo nome que o arquivo.
+
+//Na presença do método main, qualquer classe poderá iniciar a execução do programa.
+
 public class Classes {
     
     public static void main(String[] args) {
