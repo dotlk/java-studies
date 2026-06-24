@@ -8,13 +8,12 @@ public class Encapsulamento {
         Aluno gabriel = new Aluno();
         gabriel.adicionarnotas(10, 30);
 
-    
     }
 }
 
 
 //Exemplo - classe Aluno
-class Aluno{
+class Aluno {
 
     //Atributos
     private double nota1;
@@ -32,6 +31,7 @@ class Aluno{
         double media = media();
 
         System.out.println(media > 7 ? "Aprovado com média " + media : "Reprovado com média " + media);
+
     }
 } 
 
